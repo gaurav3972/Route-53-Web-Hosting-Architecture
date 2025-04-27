@@ -15,7 +15,7 @@ Upon completion of this project we will be able to create, configure and test th
 * serve static content (images, CSS) from an S3 bucket.
 
 ## Prerequisites
-
+***
 * active AWS account.
 
 * Basic knowledge of AWS services (EC2, S3, Route 53).
@@ -27,6 +27,7 @@ Upon completion of this project we will be able to create, configure and test th
 * Understanding of basic networking concepts (IP addresses, DNS).
 
 * A basic web application or HTML page to deploy (optional for testing).
+***
 ## Setup Instructions
 ### 1. Set Up EC2 Instance
 
