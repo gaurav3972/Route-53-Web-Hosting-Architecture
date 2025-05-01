@@ -5,6 +5,7 @@
 In this project, we will design a Route 53 with s3 bucket & ec2 server using Domain name: patilenterprises.shop
 ***
 ## Learning Objectives
+![]()
 Upon completion of this project we will be able to create, configure and test the following:
 
 * configure Amazon Route 53 for DNS management.
@@ -118,3 +119,5 @@ This will make `www.yourdomain.com` load your static website from S3.
 ***
 ## License
 This project is licensed under the MIT License.
+# Route-53-Web-Hosting-Architecture
+# Route-53-Web-Hosting-Architecture
