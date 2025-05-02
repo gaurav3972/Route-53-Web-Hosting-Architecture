@@ -43,27 +43,32 @@ Upon completion of this project we will be able to create, configure and test th
 ### 1. Set Up EC2 Instance
 
 * Launch an EC2 instance (Amazon Linux 2 or Ubuntu).
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20093224.png)
 
 * Open inbound ports for HTTP (80) and SSH (22) in the Security Group.
 
 * SSH into the instance and install a web server:(image)
 
 * Deploy a sample application or static website
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20093406.png)
 ## 2. Set Up S3 Bucket
 * Create a new S3 bucket.
-
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092333.png)
 * Upload your static files (e.g., images, CSS, JS).
+1[](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092645.png)
 
 * Enable public access settings if needed 
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20091937.png)
 
 * (Optional) Enable Static Website Hosting:
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092811.png)
  
 ## Step 3: Configure Route 53 DNS Records
 
 After setting up your Hosted Zone and linking your Hostinger domain to AWS nameservers, configure the DNS records in Route 53 as follows:
-
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092843.png)
 ### 1. Create an A Record for the Root Domain (`yourdomain.com`)
-
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092955.png)
 - **Record Type**: A (Alias)
 - **Name**: `yourdomain.com`
 - **Value**: Public IP Address (or Elastic IP) of your EC2 instance
@@ -77,7 +82,7 @@ This will make `yourdomain.com` point directly to your EC2-hosted website.
 - **Name**: `www.yourdomain.com`
 - **Alias Target**: S3 Bucket Static Website Endpoint (alias record)
 - **Routing Policy**: Simple
-
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092955.png)
 This will make `www.yourdomain.com` load your static website from S3.
 
 ### Example DNS Table
