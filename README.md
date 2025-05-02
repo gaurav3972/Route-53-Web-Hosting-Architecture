@@ -1,14 +1,14 @@
-<<<<<<< HEAD
+
 # Route-53-Web-Hosting-ArchitectureS
 =======
-# Route-53-Web-Hosting-Architecture
->>>>>>> 79cd1dc203093095ea89df15b3d2a26fb225e583
+# Route-53-Web-Hosting-Arch
+
 
 ## Route 53 using S3 and EC2
 In this project, we will design a Route 53 with s3 bucket & ec2 server using Domain name: patilenterprises.shop
 ***
 ## Learning Objectives
-![]()
+
 Upon completion of this project we will be able to create, configure and test the following:
 
 * configure Amazon Route 53 for DNS management.
