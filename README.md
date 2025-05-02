@@ -1,6 +1,3 @@
-
-# Route-53-Web-Hosting-ArchitectureS
-=======
 # Route-53-Web-Hosting-Arch
 
 
@@ -122,5 +119,3 @@ This will make `www.yourdomain.com` load your static website from S3.
 ***
 ## License
 This project is licensed under the MIT License.
-# Route-53-Web-Hosting-Architecture
-# Route-53-Web-Hosting-Architecture
