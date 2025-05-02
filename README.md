@@ -1,9 +1,11 @@
 <<<<<<< HEAD
-# Route-53-Web-Hosting-Arch
+# Route-53-Web-Hosting-Architecture
 
 =======
 # Route-53-Web-Hosting-Architecture
 >>>>>>> fa1ec00af87dc3436816b4592a4cb00f858149eb
+
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/prequirements.png)
 
 ## Route 53 using S3 and EC2
 In this project, we will design a Route 53 with s3 bucket & ec2 server using Domain name: patilenterprises.shop
