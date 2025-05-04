@@ -122,5 +122,15 @@ This will make `www.yourdomain.com` load your static website from S3.
 * DNS propagation after updating route53 or any nameservers may take up to 24 hours.
 
 ***
+
+## Summmary
+ 
+Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web service used to route traffic to various AWS services like S3 and EC2. When used with Amazon S3, Route 53 enables you to host static websites by pointing a domain name (such as `www.example.com`) to an S3 bucket configured for static website hosting. The S3 bucket must be named exactly like the domain and have public access enabled or be served through CloudFront. This setup is ideal for websites made with only HTML, CSS, and JavaScript.
+
+In contrast, when working with Amazon EC2, Route 53 can direct domain traffic to an EC2 instance running a dynamic web application using software like Apache, Nginx, or Node.js. By associating an Elastic IP with the EC2 instance, Route 53 can use an A record to map your domain to this IP, ensuring that the site remains reachable even if the instance is restarted. This approach is suitable for more complex, server-side applications that require computing power.
+
+In summary, Route 53 acts as a bridge between your domain name and AWS services like S3 for static websites or EC2 for dynamic ones, offering flexible routing, reliability, and easy integration with the AWS ecosystem.
+
+***
 ## License
 This project is licensed under the MIT License.
