@@ -2,8 +2,20 @@
 ![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/prequirements.png)
 
 ## Route 53 using S3 and EC2
-In this project, we will design a Route 53 with s3 bucket & ec2 server using Domain name: patilenterprises.shop
+In this project, demonstrates how to use Amazon Route 53 to host a website by integrating both Amazon EC2 (for dynamic content) and Amazon S3 (for static files), connected through a custom domain name like patilenterprises.shop. It combines DNS management, web server hosting, and cloud storage to build a complete, scalable web hosting architecture on AWS.
 ***
+## 🎯 What This Project Does
+* Hosts a dynamic web application using Amazon EC2.
+
+* Hosts static content (HTML/CSS/JS/images) using an S3 bucket.
+
+* Uses Amazon Route 53 to manage DNS for both EC2 and S3 resources.
+
+* Maps a custom domain (patilenterprises.shop) to:
+
+1. The EC2 instance for the root domain (patilenterprises.shop)
+
+2. The S3 bucket for the www.patilenterprises.shop subdomain
 ## Learning Objectives
 
 Upon completion of this project we will be able to create, configure and test the following:
@@ -133,5 +145,5 @@ In contrast, when working with Amazon EC2, Route 53 can direct domain traffic to
 In summary, Route 53 acts as a bridge between your domain name and AWS services like S3 for static websites or EC2 for dynamic ones, offering flexible routing, reliability, and easy integration with the AWS ecosystem.
 
 ***
-## License
-This project is licensed under the MIT License.
+## 🔐 License
+This project is licensed under the MIT License — meaning it's open-source and free to use, modify, and distribute.
