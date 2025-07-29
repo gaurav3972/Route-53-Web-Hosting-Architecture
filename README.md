@@ -95,6 +95,8 @@ This will make `www.yourdomain.com` load your static website from S3.
 |-------------|------------------|-------------------------------------------|----------------|
 | A           | yourdomain.com    | EC2 Elastic IP address                    | Simple         |
 | A (Alias)   | www.yourdomain.com| S3 Static Website Endpoint (Alias Target) | Simple         |
+
+
 ![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/route%2053/Screenshot%202025-04-26%20093529.png)
 
 ## Important Tips
