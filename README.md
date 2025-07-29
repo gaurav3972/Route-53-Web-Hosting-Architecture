@@ -3,6 +3,7 @@
 ## Route 53 using S3 and EC2
 In this project, demonstrates how to use Amazon Route 53 to host a website by integrating both Amazon EC2 (for dynamic content) and Amazon S3 (for static files), connected through a custom domain name like patilenterprises.shop. It combines DNS management, web server hosting, and cloud storage to build a complete, scalable web hosting architecture on AWS.
 ***
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/route%2053/.....png)
 ## 🎯 What This Project Does
 * Hosts a dynamic web application using Amazon EC2.
 
@@ -65,7 +66,7 @@ Upon completion of this project we will be able to create, configure and test th
 * Enable public access settings if needed 
 
 * (Optional) Enable Static Website Hosting:
-
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/route%2053/Screenshot%202025-04-26%20092645.png)
 ## Step 3: Configure Route 53 DNS Records
 
 After setting up your Hosted Zone and linking your Hostinger domain to AWS nameservers, configure the DNS records in Route 53 as follows:
@@ -94,7 +95,7 @@ This will make `www.yourdomain.com` load your static website from S3.
 |-------------|------------------|-------------------------------------------|----------------|
 | A           | yourdomain.com    | EC2 Elastic IP address                    | Simple         |
 | A (Alias)   | www.yourdomain.com| S3 Static Website Endpoint (Alias Target) | Simple         |
-
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/route%2053/Screenshot%202025-04-26%20093529.png)
 
 ## Important Tips
 
@@ -113,6 +114,7 @@ This will make `www.yourdomain.com` load your static website from S3.
 * (Optional) Use CloudFront CDN for faster content delivery and improved security.
 
 *** 
+![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/route%2053/Screenshot%202025-04-26%20092955.png)
 ## Notes
 
 * For HTTPS (SSL/TLS), consider using AWS Certificate Manager (ACM) with CloudFront or Load Balancer.
@@ -124,7 +126,7 @@ This will make `www.yourdomain.com` load your static website from S3.
 * DNS propagation after updating route53 or any nameservers may take up to 24 hours.
 
 ***
-
+![](https://github.com/gaurav3972/AutoScale-Load-Balancer-with-Route-53-Project/blob/main/images/Screenshot%202025-06-08%20192946.png)
 ## Summmary
  
 Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web service used to route traffic to various AWS services like S3 and EC2. When used with Amazon S3, Route 53 enables you to host static websites by pointing a domain name (such as `www.patilenterprises.shop`) to an S3 bucket configured for static website hosting. The S3 bucket must be named exactly like the domain and have public access enabled or be served through CloudFront. This setup is ideal for websites made with only HTML, CSS, and JavaScript.
