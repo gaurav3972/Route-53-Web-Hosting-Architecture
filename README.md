@@ -1,5 +1,4 @@
 # Route-53-Web-Hosting-Architecture
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/prequirements.png)
 
 ## Route 53 using S3 and EC2
 In this project, demonstrates how to use Amazon Route 53 to host a website by integrating both Amazon EC2 (for dynamic content) and Amazon S3 (for static files), connected through a custom domain name like patilenterprises.shop. It combines DNS management, web server hosting, and cloud storage to build a complete, scalable web hosting architecture on AWS.
@@ -49,32 +48,30 @@ Upon completion of this project we will be able to create, configure and test th
 ### 1. Set Up EC2 Instance
 
 * Launch an EC2 instance (Amazon Linux 2 or Ubuntu).
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20093224.png)
+
 
 * Open inbound ports for HTTP (80) and SSH (22) in the Security Group.
 
 * SSH into the instance and install a web server:(image)
 
 * Deploy a sample application or static website
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20093406.png)
+
 ## 2. Set Up S3 Bucket
 * Create a new S3 bucket.
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092333.png)
+
 * Upload your static files (e.g., images, CSS, JS).
-1[](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092645.png)
+
 
 * Enable public access settings if needed 
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20091937.png)
 
 * (Optional) Enable Static Website Hosting:
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092811.png)
- 
+
 ## Step 3: Configure Route 53 DNS Records
 
 After setting up your Hosted Zone and linking your Hostinger domain to AWS nameservers, configure the DNS records in Route 53 as follows:
 ![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092843.png)
 ### 1. Create an A Record for the Root Domain (`yourdomain.com`)
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092955.png)
+
 - **Record Type**: A (Alias)
 - **Name**: `yourdomain.com`
 - **Value**: Public IP Address (or Elastic IP) of your EC2 instance
@@ -88,7 +85,7 @@ This will make `yourdomain.com` point directly to your EC2-hosted website.
 - **Name**: `www.yourdomain.com`
 - **Alias Target**: S3 Bucket Static Website Endpoint (alias record)
 - **Routing Policy**: Simple
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092955.png)
+
 This will make `www.yourdomain.com` load your static website from S3.
 
 ### Example DNS Table
@@ -98,21 +95,13 @@ This will make `www.yourdomain.com` load your static website from S3.
 | A           | yourdomain.com    | EC2 Elastic IP address                    | Simple         |
 | A (Alias)   | www.yourdomain.com| S3 Static Website Endpoint (Alias Target) | Simple         |
 
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-29%20092743.png)
-***
+
 ## Important Tips
 
 - **Elastic IP**: If you reboot your EC2 instance without an Elastic IP, its public IP might change. Always use an Elastic IP to avoid DNS mismatch.
 - **Propagation Time**: After updating DNS records, changes may take a few minutes to a few hours to propagate globally.
 - **Alias Records**: Alias records allow AWS to map DNS to AWS services like S3 buckets easily (no IP address needed).
 
-***
-## Example Scenario
-* A user accesses www.patilenterprises.shop
-
-* Route 53 resolves the domain to the EC2 instance IP where the application is hosted.
-
-* The EC2 application loads static files (images, CSS) directly from the S3 bucket.
 ***
 ## Best Practices
 * Use an Elastic IP for your EC2 instance to avoid IP address changes.
