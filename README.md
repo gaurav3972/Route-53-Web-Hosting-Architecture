@@ -1,4 +1,4 @@
-# Route-53-Web-Hosting-Architecture
+# 🕸️ Route-53-Web-Hosting-Architecture
 
 ## Route 53 using S3 and EC2
 In this project, demonstrates how to use Amazon Route 53 to host a website by integrating both Amazon EC2 (for dynamic content) and Amazon S3 (for static files), connected through a custom domain name like patilenterprises.shop. It combines DNS management, web server hosting, and cloud storage to build a complete, scalable web hosting architecture on AWS.
