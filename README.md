@@ -69,7 +69,7 @@ Upon completion of this project we will be able to create, configure and test th
 ## Step 3: Configure Route 53 DNS Records
 
 After setting up your Hosted Zone and linking your Hostinger domain to AWS nameservers, configure the DNS records in Route 53 as follows:
-![](https://github.com/gaurav3972/Route-53-Web-Hosting-Architecture/blob/main/img/Screenshot%202025-04-26%20092843.png)
+
 ### 1. Create an A Record for the Root Domain (`yourdomain.com`)
 
 - **Record Type**: A (Alias)
