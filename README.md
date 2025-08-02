@@ -11,7 +11,7 @@ In this project, demonstrates how to use Amazon Route 53 to host a website by in
 
 * Uses Amazon Route 53 to manage DNS for both EC2 and S3 resources.
 
-* Maps a custom domain (patilenterprises.shop) to:
+* Maps a custom domain (patilenterprises.shop) to:-
 
 1. The EC2 instance for the root domain (patilenterprises.shop)
 
